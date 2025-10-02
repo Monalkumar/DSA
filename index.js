@@ -1747,28 +1747,56 @@
 // const nums = findNums(arr,11);
 // console.log(nums)
 
-const arr = [1,2,3,4,5,6,7];
+// const arr = [1,2,3,4,5,6,7];
 
-function findNums(arr, target){
-   let low = 0;
-   let high = arr.length-1;
-   while(low<=high){
-      let middle = Math.floor((low+high)/2)
-      if(arr[middle] === target){
-         return middle
-      }
-      else if(arr[middle]>target){
-         high = middle-1
-      }
-      else if(arr[middle]<target){
-         low = middle+1
-      }
-      else{
-         return -1
-      }
-   }
+// function findNums(arr, target){
+//    let low = 0;
+//    let high = arr.length-1;
+//    while(low<=high){
+//       let middle = Math.floor((low+high)/2)
+//       if(arr[middle] === target){
+//          return middle
+//       }
+//       else if(arr[middle]>target){
+//          high = middle-1
+//       }
+//       else if(arr[middle]<target){
+//          low = middle+1
+//       }
+//       else{
+//          return -1
+//       }
+//    }
    
-}
+// }
 
-const nums = findNums(arr,6);
+// const nums = findNums(arr,6);
+// console.log(nums)
+
+const arr =[1,5,2,3,6,7];
+
+function findNums(arr){
+   let n =arr.length
+   for(let i =0; i<n-1; i++){
+      for(let j=0;j<n-1-i;j++){
+         if(arr[j]>arr[j+1]){
+            let temp = arr[j]
+           arr[j]=arr[j+1]
+            arr[j+1]=temp
+           
+
+         }
+      }
+
+   }
+   return arr
+}
+const nums = findNums(arr);
 console.log(nums)
+
+// let a =10;
+// let b =20;
+// let temp=10;
+// a=b;
+// b=temp
+// console.log(a,b)
