@@ -1773,26 +1773,26 @@
 // const nums = findNums(arr,6);
 // console.log(nums)
 
-const arr =[1,5,2,3,6,7];
+// const arr =[1,5,2,3,6,7];
 
-function findNums(arr){
-   let n =arr.length
-   for(let i =0; i<n-1; i++){
-      for(let j=0;j<n-1-i;j++){
-         if(arr[j]>arr[j+1]){
-            let temp = arr[j]
-           arr[j]=arr[j+1]
-            arr[j+1]=temp
+// function findNums(arr){
+//    let n =arr.length
+//    for(let i =0; i<n-1; i++){
+//       for(let j=0;j<n-1-i;j++){
+//          if(arr[j]>arr[j+1]){
+//             let temp = arr[j]
+//            arr[j]=arr[j+1]
+//             arr[j+1]=temp
            
 
-         }
-      }
+//          }
+//       }
 
-   }
-   return arr
-}
-const nums = findNums(arr);
-console.log(nums)
+//    }
+//    return arr
+// }
+// const nums = findNums(arr);
+// console.log(nums)
 
 // let a =10;
 // let b =20;
@@ -1800,3 +1800,69 @@ console.log(nums)
 // a=b;
 // b=temp
 // console.log(a,b)
+
+// 5! = 5*4*3*2*1;
+
+// function factorialNumms(n){
+   
+//    if(n==0) return 1;
+//    return n * factorialNumms(n-1)
+// }
+
+// const nums = factorialNumms(5);
+// console.log(nums)   
+
+// const arr = [1,2,3,4,5,6]
+// function findSums(n){
+//   if(n<0) return 0;
+//   if(arr[n]%2===0){
+//     return arr[n] + findSums(n-1)
+//   }
+//   else{
+//     return findSums(n-1)
+//   }
+
+// }
+
+// const nums = findSums(arr.length-1);
+// console.log(nums); 
+    
+// 5!=5*4*3*2*1
+
+// function Nums(n){
+//   if(n===0) return 0;
+//   return n + Nums(n-1)
+
+// }
+
+// const numbers = Nums(5);
+// console.log(numbers)
+
+// const arr = [1,2,3,4,5,6,7];
+
+// function findSumOfEvenNums(){
+//   let count =0
+//   for(let i=0;i<arr.length;i++){
+//     if(arr[i]%2===0){
+//     count = count +arr[i]
+//     }
+//   }
+//   return count;
+// }
+// const nums = findSumOfEvenNums();
+// console.log(nums)
+
+const arr = [1,2,3,4,5,6,7];
+
+function evenNums(n){
+  if(n<1) return 0;
+  if(arr[n]%2===0){
+    return arr[n] + evenNums(n-1)
+  } 
+  else{
+    return evenNums(n-1)
+  }
+}
+
+const nums = evenNums(arr.length-1);
+console.log(nums)
