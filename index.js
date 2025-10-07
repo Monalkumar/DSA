@@ -1864,25 +1864,39 @@
 // const nums = evenNums(arr.length - 1);
 // console.log(nums);
 
-const arr = [1, 2, 3, 4, 5, 6, 7];
-function findNums(arr, target) {
-  let low = 0;
-  let high = arr.length - 1;
+// const arr = [1, 2, 3, 4, 5, 6, 7];
+// function findNums(arr, target) {
+//   let low = 0;
+//   let high = arr.length - 1;
 
-  while (low <= high) {
-    let mid = Math.floor(high + low) / 2;
-    if (arr[mid] === target) {
-      return mid;
-    } else if (arr[mid] > target) {
-      high = mid - 1;
-    } else if (arr[mid] < target) {
-      low = mid + 1;
-    } 
-    else{
-        return -1
-    }
-  }
+//   while (low <= high) {
+//     let mid = Math.floor(high + low) / 2;
+//     if (arr[mid] === target) {
+//       return mid;
+//     } else if (arr[mid] > target) {
+//       high = mid - 1;
+//     } else if (arr[mid] < target) {
+//       low = mid + 1;
+//     } 
+//     else{
+//         return -1
+//     }
+//   }
   
+// }
+// const nums = findNums(arr, 6);
+// console.log(nums);
+
+function isNumberPalindrone(n){
+let original = n
+let rev = 0
+while(n>0){
+let rem = (n%10);
+rev = rev*10+rem;
+n = Math.floor(n/10)
+
 }
-const nums = findNums(arr, 6);
-console.log(nums);
+return rev===original ? true:false
+}
+const nums = isNumberPalindrone(121);
+console.log(nums)
