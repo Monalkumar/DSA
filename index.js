@@ -1659,7 +1659,6 @@
 // const nums = checkNums(arr,5);
 // console.log(nums)
 
-
 // linear search
 // const arr = [1,2,3,4,5,6,7]
 
@@ -1692,7 +1691,7 @@
 //        return -1;
 //     }
 //   }
-  // }
+// }
 
 // const nums = findNums(arr, 6);
 // console.log(nums);
@@ -1733,7 +1732,7 @@
 // const nums = findLargestNums();
 // console.log(nums)
 
-// const arr = [1,3,2,2,5,5,6,11,7] 
+// const arr = [1,3,2,2,5,5,6,11,7]
 
 // function findNums(arr,target){
 //    for(let i = 0; i<arr.length; i++){
@@ -1767,7 +1766,7 @@
 //          return -1
 //       }
 //    }
-   
+
 // }
 
 // const nums = findNums(arr,6);
@@ -1783,7 +1782,6 @@
 //             let temp = arr[j]
 //            arr[j]=arr[j+1]
 //             arr[j+1]=temp
-           
 
 //          }
 //       }
@@ -1804,13 +1802,13 @@
 // 5! = 5*4*3*2*1;
 
 // function factorialNumms(n){
-   
+
 //    if(n==0) return 1;
 //    return n * factorialNumms(n-1)
 // }
 
 // const nums = factorialNumms(5);
-// console.log(nums)   
+// console.log(nums)
 
 // const arr = [1,2,3,4,5,6]
 // function findSums(n){
@@ -1825,8 +1823,8 @@
 // }
 
 // const nums = findSums(arr.length-1);
-// console.log(nums); 
-    
+// console.log(nums);
+
 // 5!=5*4*3*2*1
 
 // function Nums(n){
@@ -1852,17 +1850,39 @@
 // const nums = findSumOfEvenNums();
 // console.log(nums)
 
-const arr = [1,2,3,4,5,6,7];
+// const arr = [1, 2, 3, 4, 5, 6, 7];
 
-function evenNums(n){
-  if(n<1) return 0;
-  if(arr[n]%2===0){
-    return arr[n] + evenNums(n-1)
-  } 
-  else{
-    return evenNums(n-1)
+// function evenNums(n) {
+//   if (n < 1) return 0;
+//   if (arr[n] % 2 === 0) {
+//     return arr[n] + evenNums(n - 1);
+//   } else {
+//     return evenNums(n - 1);
+//   }
+// }
+
+// const nums = evenNums(arr.length - 1);
+// console.log(nums);
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+function findNums(arr, target) {
+  let low = 0;
+  let high = arr.length - 1;
+
+  while (low <= high) {
+    let mid = Math.floor(high + low) / 2;
+    if (arr[mid] === target) {
+      return mid;
+    } else if (arr[mid] > target) {
+      high = mid - 1;
+    } else if (arr[mid] < target) {
+      low = mid + 1;
+    } 
+    else{
+        return -1
+    }
   }
+  
 }
-
-const nums = evenNums(arr.length-1);
-console.log(nums)
+const nums = findNums(arr, 6);
+console.log(nums);
