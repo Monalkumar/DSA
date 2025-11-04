@@ -1887,16 +1887,140 @@
 // const nums = findNums(arr, 6);
 // console.log(nums);
 
-function isNumberPalindrone(n){
-let original = n
-let rev = 0
-while(n>0){
-let rem = (n%10);
-rev = rev*10+rem;
-n = Math.floor(n/10)
+// function isNumberPalindrone(n){
+// let original = n
+// let rev = 0
+// while(n>0){
+// let rem = (n%10);
+// rev = rev*10+rem;
+// n = Math.floor(n/10)
 
+// }
+// return rev===original ? true:false
+// }
+// const nums = isNumberPalindrone(121);
+// console.log(nums)
+
+
+// const arr =[1,1,1,2,2,3,3,4,5,6,7];
+// function rmoveDuplices(arr){
+//     let x =0;
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i]>arr[x]){
+//           x=x+1
+//           arr[x]=arr[i]
+//         }
+//     }
+//     return x+1
+// }
+
+// const nums= rmoveDuplices(arr);
+// console.log(arr.slice(0,nums));
+
+
+
+
+// const arr = [1,2,3,4,5,6,7];
+// let largestNums = -Infinity;
+
+// function findLargestNums(){
+//   for(let i=0; i<arr.length;i++){
+//     if(arr[i]>largestNums){
+//       largestNums=arr[i]
+//     }
+
+//   }
+//   return largestNums;
+// }
+// const largestNubers = findLargestNums();
+// console.log(largestNubers);
+//  let largestNums = -Infinity;
+// function secondlargestNums(){
+//   for(let i=0; i<arr.length; i++){
+    
+//   } 
+// }
+
+// function outer(){
+//   let success = true;
+//   function innerFunction(){
+//     console.log(success)
+//   }
+//   return innerFunction
+// }
+
+
+// const closureFunction= outer();
+// closureFunction()
+
+// find largestNums in the array
+// const arr = [1,2,3,4,5,6,7]
+// let largestNums = -Infinity;
+
+//  find secondLargstNums
+
+// function func(num){
+   
+//     if(num===0) return 0;
+//      return num + func(num-1)
+   
+    
+   
+    
+// }
+// console.log(func(5));
+
+// const arr = [1,2,3,4,5,6,7];
+// let target = 5;
+
+// function binarySearch(arr,target){
+//     let low = 0;
+//     let high = arr.length-1
+
+//     while(low<=high){
+//         let mid = Math.floor((low+high)/2)
+//         if (arr[mid]== target){
+//           return mid  
+//         }
+//         else if(arr[mid]<target){
+//             low = mid +1
+//         }
+//         else if(arr[mid]>target){
+//             high = mid -1
+//         }
+//         else {
+//             return -1
+//         }
+//     }
+// }
+// const nums = binarySearch(arr,6);
+// console.log(nums)
+
+const arr = [1,2,5,7,11,15,16,21]
+
+let target = 15;
+
+function binarySearchNums(arr,target){
+    let low = 0;
+    let high = arr.length-1
+
+    while(low<=high){
+        let mid = Math.floor((low+high)/2);
+        if(arr[mid]===target){
+            return mid
+        }
+        else if(arr[mid]<target){
+           low = mid+1
+        }
+        else if(arr[mid]>target){
+            high = mid-1
+        }
+        else{
+            return -1
+        }
+
+    }
 }
-return rev===original ? true:false
-}
-const nums = isNumberPalindrone(121);
+
+const nums =binarySearchNums(arr,21);
 console.log(nums)
