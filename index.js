@@ -1996,31 +1996,172 @@
 // const nums = binarySearch(arr,6);
 // console.log(nums)
 
-const arr = [1,2,5,7,11,15,16,21]
+// const arr = [1,2,5,7,11,15,16,21]
 
-let target = 15;
+// let target = 15;
 
-function binarySearchNums(arr,target){
-    let low = 0;
-    let high = arr.length-1
+// function binarySearchNums(arr,target){
+//     let low = 0;
+//     let high = arr.length-1
 
-    while(low<=high){
-        let mid = Math.floor((low+high)/2);
-        if(arr[mid]===target){
-            return mid
-        }
-        else if(arr[mid]<target){
-           low = mid+1
-        }
-        else if(arr[mid]>target){
-            high = mid-1
-        }
-        else{
-            return -1
-        }
+//     while(low<=high){
+//         let mid = Math.floor((low+high)/2);
+//         if(arr[mid]===target){
+//             return mid
+//         }
+//         else if(arr[mid]<target){
+//            low = mid+1
+//         }
+//         else if(arr[mid]>target){
+//             high = mid-1
+//         }
+//         else{
+//             return -1
+//         }
 
-    }
+//     }
+// }
+
+// const nums =binarySearchNums(arr,21);
+// console.log(nums)
+
+
+// const arr = [1,2,3,4,5,6,7];
+// let target = 6
+
+// function linerSearch(arr, target){
+//     for(let i =0; i<arr.length; i++){
+//         if(arr[i]===target){
+//             return i
+//         }
+       
+        
+//     }
+
+//     return -1
+   
+    
+// }
+
+// const nums = linerSearch(arr, 7);
+// console.log(nums)
+
+
+
+// function isNumsPalindrone(n){
+// let originalNums = n
+// let rev = 0;
+// while(n>0){
+//    let rem = n%10;
+//    rev = (10*rev)+rem;
+//    n = Math.floor(n/10)
+
+// }
+// return originalNums===rev?true:false
+
+// } 
+// const nums =isNumsPalindrone(121);
+// console.log(nums)
+
+// const arr = [1,2,2,2,3,4,5,5,5,6]  
+// function findDuplicates(arr){
+//     let x = 0;
+//     for(let i =0;i<arr.length;i++){
+//         if(arr[i]>arr[x]){
+//             x = x+1
+//             arr[x] = arr[i]
+//         }
+//     }
+//     return x+1
+// }
+
+// const nums = findDuplicates(arr);
+// console.log(nums);
+
+// const arr = [1,2,3,4,5,6,7]
+// target =7
+// function isPalindroneNums(arr, target){
+// let low = 0;
+// let high = arr.length-1;
+// while(low<=high){
+//     let mid = Math.floor((low+high)/2);
+//     if(arr[mid] ===target){
+//         return mid
+//     }
+//     if(arr[mid]>target){
+//        high = mid-1 
+//     }
+//     if(arr[mid]<target){
+//        low = mid+1 
+//     }
+    
+// }
+// return -1
+// }
+
+// const nums = isPalindroneNums(arr,7)
+// console.log(nums)
+
+// const arr = [1,1,1,2,2,3,4,5,5,5,6,6,6,7]
+// function duplicateNums(arr){
+//     let x = 0
+//     for(let i = 0; i<arr.length; i++){
+//         if(arr[i]>arr[x]){
+//             x = x+1;
+//             arr[x]=arr[i]
+//         }
+//      }
+//     return x+1
+// }
+// const nums = duplicateNums(arr);
+// console.log(nums);
+// console.log(arr.slice(0, nums));
+
+
+// const arr = [1,2,2,3,4,4,5,6,6,7 ]
+
+// function duplicateNums(arr){
+//     let x = 0;
+//     for(let i =0; i<arr.length; i++){
+//         if(arr[arr]>arr){
+//             x = x+1;
+//             arr[x] = arr[i]
+//         }
+//     }
+//     return x+1
+// }
+
+// const nums = duplicateNums(arr);
+// console.log(nums);
+// console.log(arr.slice(0,nums))
+
+
+// find the second largest nummbers
+
+// const arr =[11,2,6,3,5,9,15,19,21,27,25]
+
+// let largestNums = -Infinity;
+// let secondLargetNums = -Infinity;
+
+// function secondLargestNums(){
+//     for(let i =0; i<arr.length;i++){
+//         if(arr[i]>largestNums){
+//             secondLargestNums = largestNums;
+//             largestNums = arr[i]
+//         }
+//         else if(arr[i]>secondLargestNums && arr[i] !==largestNums){
+//           secondLargestNums = arr[i]
+//         }
+//     }
+//     return secondLargestNums
+// }
+
+// const nums = secondLargestNums();
+
+// console.log(nums);
+
+const arr = [1,2,3,4,5,6,7]
+for(let i = 0; i<arr.length; i++ ){
+    console.log(i)
 }
 
-const nums =binarySearchNums(arr,21);
-console.log(nums)
